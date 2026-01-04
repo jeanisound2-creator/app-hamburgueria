@@ -18,7 +18,7 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      const user = login(email, password);
+      const user = await login(email, password); // ADICIONADO AWAIT
       
       if (user) {
         // Redireciona baseado no perfil
@@ -43,12 +43,12 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <img 
-            src="https://k6hrqrxuu8obbfwn.public.blob.vercel-storage.com/temp/cf7f340e-666e-47e3-b604-3f6e61928774.png" 
+            src="https://k6hrqrxuu8obbfwn.public.blob.vercel-storage.com/temp/fbb5cfe6-fb78-4954-8cdb-d393742808e8.png" 
             alt="Star Burguer" 
             className="h-32 w-32 mx-auto mb-4"
           />
           <h1 className="text-3xl font-bold text-white mb-2">Star Burguer</h1>
-          <p className="text-gray-400">Sistema de Gestão de Entregas</p>
+          <p className="text-gray-400">Sistema de Gestão de delivery</p>
         </div>
 
         {/* Card de Login */}

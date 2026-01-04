@@ -8,6 +8,7 @@ export interface User {
   password: string;
   role: UserRole;
   name: string;
+  chavePix?: string;
 }
 
 export interface Entrega {
@@ -19,6 +20,15 @@ export interface Entrega {
   descricao?: string;
   status: 'pendente' | 'pago';
   dataPagamento?: string;
+}
+
+export interface Pagamento {
+  id: string;
+  entregador_id: string;
+  valor: number;
+  data: string;
+  gerente_id: string;
+  created_at: string;
 }
 
 export interface ResumoEntregador {
